@@ -82,3 +82,6 @@ crashlytics-build.properties
 # Todo lists
 todo.md
 todo.md.meta
+
+# VSCode Solution
+*.slnx
