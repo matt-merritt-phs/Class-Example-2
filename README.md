@@ -15,75 +15,26 @@ Since we are all on the same version of Unity now, the set up should be a bit qu
 7. Select "Add project from disk"
 8. Find the inner folder from the unzipping process earlier (should be "Class-Example-2-master", with the "Assets" folder and a bunch more inside)
 
-## Activity 2: Building a Scene
+## Scene Setup
 
-1. Create a new scene in your scenes folder, called "Activity2"
-2. From the list of 3D objects, add a Plane for our floor
-3. Add a Cube that will act as a ramp
-4. Rotate and lengthen the cube so that it has a wider surface and a slope
-5. Add a Sphere that starts above our ramp
+Once you have opened the project, we will be working on adding a set of dominos that will fall over.
 
-Submit a screenshot of your Unity editor with the three GameObjects. An example is included below.
+1. First, add the floor that our shapes will exist on. The floor should be centered at the world origin, and stretched to cover more space.
+2. Then add a cube, which will represent one domino.
+3. Edit the cube's scale to make it taller, and thinner.
+4. Copy the domino and place at least 5 of them in the scene, with each one being positioned in front of the next.
+5. Select one domino to be the first that will fall over. Rotate this domino slightly so that it will naturally fall and knock over the next.
+6. With the tilted domino selected, add a new component called a Rigidbody. This will handle our Physics.
+7. In the heirachy, select all the other dominos, and also add a rigidbody.
 
-![Image of the completed scene for activity 2.](activity_2.png)
+Take a screenshot of your project and upload it to Google Classroom.
 
-## Activity 3: Introduction to Components
+## Bonus Exploration
 
-1. Select the Sphere in the heirarchy
-2. In the Inspector on the right, at the bottom, click "Add Component"
-3. In the dropdown, search for "Rigidbody" and click it to add one to our sphere
-4. In the top of the editor, press play and observe what happens
-5. Reposition the camera in the scene so that you have a better angle of the sphere motion
+If you have extra time, consider the following:
 
-Submit a screenshot of your Unity editor with the sphere in motion after you press play. An example is included below.
+1. Instead of rotating a starting domino, create something to knock the first one over. This could be a ball on a ramp, or a falling block, or something else.
+2. Add multiple platforms and verticality. Try to make sure that everything is still visible with the camera.
+3. Add objects that are outside the camera lens and experiment with pausing in Play mode. In Play mode, you can swap to the scene view and interact with the GameObjects and Physics in real-time.
 
-![Image of the completed scene for activity 3.](activity_3.png)
-
-# Day 2 (2/5/2026) - Pinball Setup
-
-First, we will need to change the Input system to use the old model instead of the new one that came with Unity 6. The new input requires us to configure a bunch of actions and events, and we only need basic input for now.
-
-## Part 1 - Changing the Input System
-
-1. Open your Unity Project
-2. On the top ribbon, look under "Edit"
-3. Select "Project Settings" from the bottom
-4. Navigate to the page called "Player"
-5. Expand "Other Settings"
-6. Under "Configuration" in the middle, change "Active Input Handling" from "Input System Package (New)" to "Input Manager (Old)"
-7. Restart Unity when prompted
-8. Press the play button, and restart the Unity editor when prompted
-
-There will not be any noticeable changes yet, but we will be able to test with our scripts in a second.
-
-## Part 2 - Importing the Script
-
-1. Go to Google Classroom, and look for the most recent resource called "Pinball Paddle Scripts"
-2. Download the "Paddle.cs" and "Clicking.cs" script
-3. In the Unity Editor, in the Project window at the bottom, add a folder to the "Assets" folder called "Scripts"
-4. Open a file explorer window with your downloads folder
-5. Drag the "Paddle.cs" and "Clicking.cs" file from your downloads to the new scripts folder in Unity
-
-After doing this, you should be able to add the Paddle and Clicking scripts just like any other component in the heirarchy. You can also drag the script onto a GameObject to add it.
-
-## Part 3 - Testing Everything so Far
-
-1. Add the "Clicking" script as a component to a GameObject in your scene (I recommend adding this to the ball)
-2. In the bottom of the Unity Editor, switch from the "Project" tab to the "Console" tab
-3. Press the play button at the top of the Unity Editor
-4. Click with the left and right mouse button, and confirm that messages are appearing in the console
-
-If you do not see messages in the console, there could be an issue with the swap to the old input system, or you could have missed a step when working with the scripts.
-
-## Part 4 - Building out the Pinball Scene
-
-1. Begin building out the environment using 3D shapes, including the shapes that will act as the paddles
-2. Add two empty GameObjects to represent the pivot points of the paddles, and move it to the desired location
-3. Drag the GameObject for the 3D shape of the paddle under the corresponding pivot GameObject to make it a child
-4. Add a Rigidbody component to the paddle pivot parent GameObject, and make the Rigidbody kinematic
-5. Add the Paddle script to the paddle pivot parent GameObject, and configure the settings
-6. Adjust the settings of the rigidbody and paddle script until you have a responsive swing
-
-I have included a picture of my pinball scene as an example. You are encouraged to do something different, and experiment with different layouts.
-
-![Image of the day one pinball scene.](pinball_scene_1.png)
+If you do anything extra, you can take a screenshot of what you have at the end of this exporation instead for Google Classroom.
