@@ -136,7 +136,7 @@ crashlytics-build.properties
 ```
 
 5. Go to GitHub and create a new remote repository with the same name as the repository on your machine.
-6. Click on the "Code" button, and copy the link.
+6. Copy the link ending in .git from the blank repository page.
 7. Go back to the terminal with the local repository and write the following command, with link being replaced by your remote repository link:
 
 ```bash
@@ -170,3 +170,45 @@ Note that you can change initial commit to be a descriptive message that will be
 ```bash
 git push origin master
 ```
+
+## Using a repository on another machine
+
+Once you have a public or private repository on GitHub, you can create copies of that repo on other devices like so:
+
+1. Open up a Git Bash terminal window.
+2. Use the `cd` command to navigate to your desired folder. In our case, for the lab computers, we will use the Downloads folder.
+3. On the GitHub page, click the code button, and copy the link.
+4. In the terminal, write the following command, where link is the link we copied earlier:
+
+```bash
+git clone link
+```
+
+5. Use the `cd` command to change into the repository.
+6. From here, you can run `git status` and you should be able to see that the repo is configured.
+7. To check that you have the most recent version, run the following command:
+
+```bash
+git log --oneline
+```
+
+8. If you have the most recent version, you can edit all of your files and make changes in Unity. 
+9. Make sure to save all scenes, scripts, and other files.
+10. Return to your terminal and run `git status` again. You will see all the files that you changed.
+11. Use `git add .` to prepare your files for a commit.
+12. Use `git commit -m "message"` to create a new commit with all your changes and a custom message in the place of the word message.
+13. Use `git push origin master` to get share your changes with the remote repository on GitHub.
+
+## Getting caught up
+
+Git does not automatically update your files when new changes get pushed from another device. To update your files:
+
+1. Open a Git Bash terminal.
+2. Navigate to the local repository.
+3. Enter the command:
+
+```bash
+git pull origin master
+```
+
+If you run into troubles here, such as a merge conflict, send me an email. The process will be a bit involved.
