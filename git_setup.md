@@ -173,6 +173,21 @@ git push origin master
 
 ## Using a repository on another machine
 
+Before starting this, make sure that you have Git installed. 
+
+1. Install Git with the default settings. You can download Git at [https://git-scm.com/](https://git-scm.com/).
+2. With your GitHub account username instead of the word username, enter the following command.
+
+```bash
+git config --global user.name "username"
+```
+
+3. With your GitHub account email instead of the word email, enter the following command.
+
+```bash
+git config --global user.email "email"
+```
+
 Once you have a public or private repository on GitHub, you can create copies of that repo on other devices like so:
 
 1. Open up a Git Bash terminal window.
